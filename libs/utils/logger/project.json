@@ -1,0 +1,30 @@
+{
+  "name": "util-logger",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/utils/logger/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/utils/logger",
+        "main": "libs/utils/logger/src/index.ts",
+        "tsConfig": "libs/utils/logger/tsconfig.lib.json",
+        "assets": ["libs/utils/logger/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/utils/logger/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}

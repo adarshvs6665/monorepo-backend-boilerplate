@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@learn/util/json": ["libs/utils/json/src/index.ts"],
+      "@learn/util/logger": ["libs/utils/logger/src/index.ts"],
+      "@learn/util/nestjs/logger": ["libs/utils/nestjs/logger/src/index.ts"],
+      "@learn/util/nestjs/logger/test-utils": [
+        "libs/utils/nestjs/logger/tests/utils/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
